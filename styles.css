@@ -6,6 +6,7 @@
     --face-shadow3: #7f5c51;
     --article-bg: #8977AD;
     --eye: #392730;
+    --mouth: rgb(255, 90, 118);
 }
 
 @keyframes blink {
@@ -243,7 +244,7 @@ article {
     border: 2px solid var(--face-shadow3);
     border-radius: 50% 50% 50% 50% / 0% 0% 50% 50% ;
     border-top: none;
-    background-color: rgb(255, 90, 118);
+    background-color: var(--mouth);
     animation: mouth-open 3s cubic-bezier(0.28,-0.24, 1, 1.11) infinite;
 }
 
@@ -321,4 +322,22 @@ article {
     transform: translateX(-70%) rotate(30deg);
     ;
     clip-path: ellipse(50% 50% at left);
+}
+
+.chin {
+    position: absolute;
+    bottom: 30%;
+    width: 15%;
+    height: 5%;
+    border-radius: 50%;
+    background-color: var(--mouth);
+    filter: blur(1vmin);
+}
+
+.chin-left {
+    left: 10%;
+}
+
+.chin-right {
+    right: 10%;
 }
