@@ -73,6 +73,25 @@ article {
     transform: scaleX(-1);
 }
 
+.eyebrow {
+    position: absolute;
+    top: -40%;
+    z-index: 1;
+    width: 130%;
+    height: 40%;
+    border: 4px solid var(--hair);
+    border-radius: 50%;
+    clip-path: polygon(0 50%, 100% 50%, 100% 0, 0 0);
+}
+
+.eyebrow-left {
+    right: 0;
+}
+
+.eyebrow-right {
+    left: 0;
+}
+
 .nose {
     position: relative;
     top: 65%;
