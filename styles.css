@@ -1,0 +1,42 @@
+:root {
+    --hair: rgb(131, 0, 15);
+    --face: #FBCEB1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+article {
+    position: relative;
+    width: 80vmin;
+    aspect-ratio: 1; /* so it's a square */
+    background:
+    repeating-linear-gradient(#0003 0 0.125%, #0000 0 0.9875%, #0003 0 10%),
+    repeating-linear-gradient(90deg, #0003 0 0.125%, #0000 0 0.9875%, #0003 0 10%);
+}
+
+.face {
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    top: 30%;
+    left: 30%;
+    border-radius: 50% 50% 50% 50% / 34% 34% 47% 47%;
+    background-color: var(--face);
+}
+
+.chin {
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 50%;
+    background-color: red;
+    border-radius: 50% 50% 50% 50% / 34% 34% 47% 47%;
+}
+
+.right {
+    transform: scaleX(-1);
+    right: 0;
+}
