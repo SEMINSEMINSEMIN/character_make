@@ -1,6 +1,8 @@
 :root {
     --hair: rgb(131, 0, 15);
     --face: #FBCEB1;
+    --face-shadow: #E3A996;
+    --face-shadow2: #C49282;
 }
 
 body {
@@ -25,6 +27,7 @@ article {
     left: 30%;
     border-radius: 50% 50% 50% 50% / 34% 34% 47% 47%;
     background-color: var(--face);
+    background-image: radial-gradient(var(--face) 0%);
 }
 
 .eye {
@@ -64,4 +67,18 @@ article {
     right: -35%;
     border-right: none;
     transform: scaleX(-1);
+}
+
+.nose {
+    position: relative;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5%;
+    height: 2.5%;
+    border: 2px solid var(--face-shadow2);
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom: none;
+    box-shadow: 0 0 5px 2px var(--face-shadow) 
 }
