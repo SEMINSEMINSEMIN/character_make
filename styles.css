@@ -3,6 +3,7 @@
     --face: #FBCEB1;
     --face-shadow: #E3A996;
     --face-shadow2: #C49282;
+    --face-shadow3: #7f5c51;
 }
 
 body {
@@ -81,4 +82,16 @@ article {
     border-top-right-radius: 100%;
     border-bottom: none;
     box-shadow: 0 0 5px 2px var(--face-shadow) 
+}
+
+.mouth {
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20%;
+    height: 2%;
+    border-radius: 100% 0% 50% 50% / 0 0 100% 100% ;
+    border: 2px solid var(--face-shadow3);
+    border-top: none;
 }
