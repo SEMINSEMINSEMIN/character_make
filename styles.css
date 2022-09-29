@@ -38,16 +38,6 @@
     }
 }
 
-/* @keyframes eyelash {
-    0% {
-        top: 36%;
-    }
-
-    100% {
-        top: 50%;
-    }
-} */
-
 @keyframes eyelash {
     0% {
         top: 36%;
@@ -78,35 +68,23 @@
     }
 }
 
-/* @keyframes eyelash {
+@keyframes mouth-open {
     0% {
-        top: 36%;
+        z-index: -1;
     }
 
-    20% {
-        top: 50%;
-    }
-    
-    30% {
-        top: 36%;
+    80% {
+        z-index: -1;
     }
 
-    50% {
-        top: 50%;
-    }
-
-    60% {
-        top: 36%;
-    }
-
-    70% {
-        top: 50%;
+    81% {
+        z-index: 0;
     }
 
     100% {
-        top: 36%;
+        z-index: 0;
     }
-} */
+}
 
 body {
     margin: 0;
@@ -194,10 +172,8 @@ article {
     border-bottom: none;
     border-right: 0;
     border-left: 0;
-    /* animation: eyelash 0.4s cubic-bezier(0.28,-0.24, 1, 1.11) infinite alternate; */
     animation: eyelash 3s cubic-bezier(0.28,-0.24, 1, 1.11) infinite;
     box-shadow: 0 -1vmin var(--face);
-    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
 .eyelash-left {
@@ -244,6 +220,7 @@ article {
 
 .mouth {
     position: absolute;
+    z-index: 2;
     bottom: 25%;
     left: 50%;
     transform: translateX(-50%);
@@ -252,6 +229,22 @@ article {
     border-radius: 100% 0% 50% 50% / 0 0 100% 100% ;
     border: 2px solid var(--face-shadow3);
     border-top: none;
+    background-color: var(--face);
+}
+
+.inner-mouth {
+    position: absolute;
+    z-index: 1;
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20%;
+    height: 20%;
+    border: 2px solid var(--face-shadow3);
+    border-radius: 50% 50% 50% 50% / 0% 0% 50% 50% ;
+    border-top: none;
+    background-color: rgb(255, 90, 118);
+    animation: mouth-open 3s cubic-bezier(0.28,-0.24, 1, 1.11) infinite;
 }
 
 .ear {
