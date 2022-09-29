@@ -13,14 +13,64 @@
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 
+    20% {
+        clip-path: polygon(0% 50%, 100% 50%, 100% 50%, 0 50%);
+    }
+
+    30% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    50% {
+        clip-path: polygon(0% 50%, 100% 50%, 100% 50%, 0 50%);
+    }
+
+    60% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    80% {
+        clip-path: polygon(0% 50%, 100% 50%, 100% 50%, 0 50%);
+    }
+
     100% {
         clip-path: polygon(0% 50%, 100% 50%, 100% 50%, 0 50%);
     }
 }
 
+/* @keyframes eyelash {
+    0% {
+        top: 36%;
+    }
+
+    100% {
+        top: 50%;
+    }
+} */
+
 @keyframes eyelash {
     0% {
         top: 36%;
+    }
+
+    20% {
+        top: 50%;
+    }
+
+    30% {
+        top: 36%;
+    }
+
+    50% {
+        top: 50%;
+    }
+
+    60% {
+        top: 36%;
+    }
+
+    80% {
+        top: 50%;
     }
 
     100% {
@@ -88,7 +138,7 @@ article {
     height: 25%;
     border-radius: 50%;
     background-color: white;
-    animation: blink 0.4s cubic-bezier(0.28,-0.24, 1, 1.11) infinite alternate;
+    animation: blink 3s cubic-bezier(0.28,-0.24, 1, 1.11) infinite;
 }
 
 .pupil {
@@ -144,7 +194,8 @@ article {
     border-bottom: none;
     border-right: 0;
     border-left: 0;
-    animation: eyelash 0.4s cubic-bezier(0.28,-0.24, 1, 1.11) infinite alternate;
+    /* animation: eyelash 0.4s cubic-bezier(0.28,-0.24, 1, 1.11) infinite alternate; */
+    animation: eyelash 3s cubic-bezier(0.28,-0.24, 1, 1.11) infinite;
     box-shadow: 0 -1vmin var(--face);
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
