@@ -5,7 +5,21 @@
     --face-shadow2: #C49282;
     --face-shadow3: #7f5c51;
     --article-bg: #8977AD;
+    --eye: #392730;
+}
+
+@keyframes blink {
+    0% {
+        background-color: white;
+    }
+
+    50% {
+        background-color: initial;
+    }
     
+    100% {
+        background-color: white;
+    }
 }
 
 body {
@@ -16,10 +30,7 @@ body {
 article {
     position: relative;
     width: 80vmin;
-    aspect-ratio: 1; /* so it's a square */
-    background:
-    repeating-linear-gradient(#0003 0 0.125%, #0000 0 0.9875%, #0003 0 10%),
-    repeating-linear-gradient(90deg, #0003 0 0.125%, #0000 0 0.9875%, #0003 0 10%);
+    height: 80vmin;
     background-color: var(--article-bg);
 }
 
@@ -43,8 +54,41 @@ article {
     background-color: white;
 }
 
+.pupil {
+    content:'';
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 70%;
+    background-color: var(--eye);
+    border-radius: 50%;
+}
+
+.pupil::before {
+    content: '';
+    position: absolute;
+    right: 10%;
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.pupil::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    background-color: black;
+}
+
 .eye.eye-left {
-    
     left: 20%;
 }
 
@@ -54,21 +98,21 @@ article {
 
 .eyelash {
     position: absolute;
-    top: 0;
-    width: 130%;
-    height: 50%;
-    border: 4px solid black;
+    top: 36%;
+    width: 23%;
+    height: 8%;
+    border: 0.6vmin solid black;
     border-radius: 52% 48% 0% 100% / 100% 54% 46% 0%;
     border-bottom: none;
 }
 
 .eyelash-left {
-    left: -35%;
+    left: 12%;
     border-right: none;
 }
 
 .eyelash-right {
-    right: -35%;
+    right: 12%;
     border-right: none;
     transform: scaleX(-1);
 }
@@ -79,7 +123,7 @@ article {
     z-index: 1;
     width: 130%;
     height: 40%;
-    border: 4px solid var(--hair);
+    border: 0.7vmin solid var(--hair);
     border-radius: 50%;
     clip-path: polygon(0 50%, 100% 50%, 100% 0, 0 0);
 }
@@ -160,7 +204,6 @@ article {
     bottom: 0;
     right: 0;
     content: '';
-    display: block;
     width: 0;
     height: 0;
     border-bottom: 20px solid var(--article-bg);
@@ -173,7 +216,6 @@ article {
     position: absolute;
     bottom: 0;
     content: '';
-    display: block;
     width: 0;
     height: 0;
     border-bottom: 20px solid var(--article-bg);
