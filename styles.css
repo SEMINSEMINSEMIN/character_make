@@ -90,10 +90,12 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: var(--article-bg);
 }
 
 article {
     position: relative;
+    margin: 0 auto;
     width: 80vmin;
     height: 80vmin;
     background-color: var(--article-bg);
