@@ -27,16 +27,20 @@ article {
     background-color: var(--face);
 }
 
-.chin {
+.eye {
     position: absolute;
-    bottom: 0;
-    width: 50%;
-    height: 50%;
-    background-color: red;
-    border-radius: 50% 50% 50% 50% / 34% 34% 47% 47%;
+    top: 37.5%;
+    width: 20%;
+    height: 25%;
+    border-radius: 50%;
+    background-color: white;
 }
 
-.right {
-    transform: scaleX(-1);
-    right: 0;
+.eye.eye-left {
+    
+    left: 20%;
+}
+
+.eye.eye-right {
+    right: 20%;
 }
