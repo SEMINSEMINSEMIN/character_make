@@ -95,3 +95,22 @@ article {
     border: 2px solid var(--face-shadow3);
     border-top: none;
 }
+
+.ear {
+    position: absolute;
+    top: 40%;
+    width: 15%;
+    height: 20%;
+    background-color: var(--face);
+}
+
+.ear-left {
+    left: -10%;
+    border-radius: 41% 59% 0% 100% / 35% 23% 10% 66%;
+}
+
+.ear-right {
+    right: -10%;
+    border-radius: 41% 59% 0% 100% / 35% 23% 10% 66%;
+    transform: scaleX(-1);
+}
