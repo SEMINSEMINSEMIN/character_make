@@ -18,6 +18,16 @@
     }
 }
 
+@keyframes eyelash {
+    0% {
+        top: 36%;
+    }
+
+    100% {
+        top: 50%;
+    }
+}
+
 /* @keyframes eyelash {
     0% {
         top: 36%;
@@ -78,7 +88,7 @@ article {
     height: 25%;
     border-radius: 50%;
     background-color: white;
-    animation: blink 0.6s infinite alternate;
+    animation: blink 0.4s cubic-bezier(0.28,-0.24, 1, 1.11) infinite alternate;
 }
 
 .pupil {
@@ -116,33 +126,35 @@ article {
 }
 
 .eye.eye-left {
-    left: 20%;
+    left: 19%;
 }
 
 .eye.eye-right {
-    right: 20%;
+    right: 19%;
 }
 
 .eyelash {
     position: absolute;
     top: 36%;
-    width: 23%;
-    height: 8%;
-    border: 0.6vmin solid black;
-    border-radius: 52% 48% 0% 100% / 100% 54% 46% 0%;
+    width: 25%;
+    height: 12.5%;
+    border: 0.7vmin solid black;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
     border-bottom: none;
-    animation: eyelash 3s infinite;
+    border-right: 0;
+    border-left: 0;
+    animation: eyelash 0.4s cubic-bezier(0.28,-0.24, 1, 1.11) infinite alternate;
+    box-shadow: 0 -1vmin var(--face);
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
 .eyelash-left {
-    left: 12%;
-    border-right: none;
+    left: 15%;
 }
 
 .eyelash-right {
-    right: 12%;
-    border-right: none;
+    right: 15%;
     transform: scaleX(-1);
 }
 
